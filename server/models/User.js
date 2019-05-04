@@ -33,7 +33,7 @@ export default class User {
     getRole = () => this._role;
 
     /**
-     * @returns {{id: (string|*), username: (string|*), email: (string|*), role: (string|*)}}
+     * @returns {{id: (string), username: (string), email: (string), role: (string)}}
      */
     getData = () => ({
         id: this._id,
