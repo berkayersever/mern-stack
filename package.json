@@ -1,6 +1,15 @@
 {
   "name": "mern-stack",
   "version": "0.1.0",
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ]
+  },
   "private": true,
   "dependencies": {
     "express": "^4.16.4",
@@ -12,7 +21,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "babel-node ./server/index.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,7 +40,9 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.4",
+    "@babel/node": "^7.2.2",
     "@babel/preset-env": "^7.4.4",
     "@babel/register": "^7.4.4"
   }
