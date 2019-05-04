@@ -1,5 +1,7 @@
-const express = require('express');
-const UserModel = require('./models/User');
+import express from 'express';
+import UserModel from './models/User';
+// const express = require('express');
+// const UserModel = require('./models/User');
 
 const app = express();
 const port = 3000;
