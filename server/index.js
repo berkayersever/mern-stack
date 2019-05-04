@@ -11,8 +11,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/', (req, res) => res.send('Hello World!'));
 app.get('/time', (req, res) => res.send({ datetime: new Date().toJSON() }));
 app.get('/v1/users', (req, res) => { res.send(users) });
+
 app.post('/v1/users', (req, res) => {
-    console.log(req.body);
+    const username = req.body.username;
+    const email = req.body.email;
+    const role = req.body.role;
     res.status(200).end();
 });
 
