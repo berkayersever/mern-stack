@@ -5,6 +5,9 @@ import users from './mocks/users';
 const app = express();
 const port = 3000;
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
 app.get('/', (req, res) => res.send('Hello World!'));
 app.get('/time', (req, res) => res.send({ datetime: new Date().toJSON() }));
 app.get('/v1/users', (req, res) => { res.send(users) });
