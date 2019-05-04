@@ -1,6 +1,7 @@
 {
   "name": "mern-stack",
   "version": "0.1.0",
+  "main": "./server/index.js",
   "babel": {
     "presets": [
       "@babel/preset-env",
@@ -22,7 +23,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "babel-node ./server/index.js"
+    "server": "babel-node ./server/index.js",
+    "nodemon": "nodemon --inspect ./server/index.js --exec babel-node"
   },
   "eslintConfig": {
     "extends": "react-app"
