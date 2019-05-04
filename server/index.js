@@ -1,6 +1,11 @@
+import UserModel from './models/User';
+
 const express = require('express');
 const app = express();
 const port = 3000;
+
+const user = new UserModel({id: 'first', email: 'berkay@live.se', username: 'Berkay', role: 'admin'});
+user.getUsername();
 
 app.get('/', (req, res) => res.send('Hello World!'));
 app.get('/ping', (req, res) => res.send('pong'));
