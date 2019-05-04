@@ -1,4 +1,5 @@
 import express from 'express';
+import bodyParser from 'body-parser';
 import users from './mocks/users';
 
 const app = express();
