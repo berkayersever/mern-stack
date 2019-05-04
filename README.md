@@ -1,2 +1,1 @@
-# mern-stack
-MERN Stack
+# MERN Stack
