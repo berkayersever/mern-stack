@@ -37,4 +37,9 @@ app.put('/v1/users/:id', (req, res) => {
     res.status(200).end();
 });
 
+app.delete('/v1/users/:id', (req, res) => {
+    console.log('delete: data =>', req.params.id);
+    res.status(200).end();
+});
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
