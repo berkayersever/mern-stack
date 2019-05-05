@@ -9,9 +9,10 @@ const port = 3000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
 app.use(withAuthentication);
 app.use(logger);
+
+// req => bodyParser.json => bodyParser.urlencoded => withAuthentication => logger => request handler
 
 app.get('/', (req, res) => {
     res.send('Hello World!');
