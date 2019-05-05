@@ -8,6 +8,17 @@ const port = 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+const logger = (req, res, next) => {    // Logger Middleware
+    console.log(
+        '=> ',
+        req.method,
+        req.originalUrl
+    );
+    next();
+};
+
+app.use(logger);
+
 app.get('/', (req, res) => {
     res.send('Hello World!');
 });
