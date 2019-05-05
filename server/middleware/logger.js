@@ -3,9 +3,9 @@ const logger = (req, res, next) => {    // Logger Middleware
         '=> ',
         req.method,
         req.originalUrl,
-        'is Authenticated: ',
+        'isAuthenticated: ',
         req.isAuthenticated,
-        'is Admin: ',
+        'isAdmin: ',
         req.isAdmin
     );
     next();
