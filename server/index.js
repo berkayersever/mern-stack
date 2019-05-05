@@ -16,6 +16,10 @@ app.get('/time', (req, res) => {
     res.send({ datetime: new Date().toJSON() });
 });
 
+app.get('/v1/users/:id', (req, res) => {
+    res.send(users[0]);
+});
+
 app.get('/v1/users', (req, res) => {
     res.send(users);
 });
