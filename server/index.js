@@ -1,21 +1,13 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import users from './mocks/users';
+import logger from './middleware/logger';
 
 const app = express();
 const port = 3000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
-const logger = (req, res, next) => {    // Logger Middleware
-    console.log(
-        '=> ',
-        req.method,
-        req.originalUrl
-    );
-    next();
-};
 
 app.use(logger);
 
