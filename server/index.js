@@ -1,7 +1,5 @@
 import express from 'express';
-import UserModel from './models/User';
-// const express = require('express');
-// const UserModel = require('./models/User');
+import users from './mocks/users';
 
 const app = express();
 const port = 3000;
