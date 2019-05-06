@@ -1,6 +1,4 @@
-import mongoose from 'mongoose';
-
-console.log(process.env.CONNECTION_STRING);
+import mongoose, { Schema } from 'mongoose';
 
 mongoose.connect(process.env.CONNECTION_STRING, {useNewUrlParser: true},
     (err) => {
