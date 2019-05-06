@@ -14,13 +14,21 @@ app.use(logger);
 
 // req => bodyParser.json => bodyParser.urlencoded => withAuthentication => logger => request handler
 
-app.get('/', (req, res) => {
-    res.send('Hello World!');
+app.get('/', function (req, res) {
+    throw new Error('BROKEN') // Express will catch this on its own.
 });
 
-app.get('/time', (req, res) => {
-    res.send({ datetime: new Date().toJSON() });
-});
+app.get('/heartbeat', (req, res) => res.send({
+    dateTime: new Date().toJSON()
+}));
+
+// app.get('/', (req, res) => {
+//     res.send('Hello World!');
+// });
+
+app.get('/time', (req, res) =>
+    res.send({ datetime: new Date().toJSON()
+}));
 
 app.get('/v1/users/:id', (req, res) => {
     res.send(users[0]);

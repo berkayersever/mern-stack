@@ -29,8 +29,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "babel-node ./server/index.js",
-    "nodemon": "nodemon --inspect ./server/index.js --exec babel-node",
-    "test-server": "jest"
+    "nodemon": "nodemon --inspect ./server/index.js --exec babel-node"
   },
   "eslintConfig": {
     "extends": "react-app"
