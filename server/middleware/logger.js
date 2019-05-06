@@ -8,7 +8,7 @@ const logger = (req, res, next) => {    // Logger Middleware
         'isAdmin: ',
         req.isAdmin
     );
-    next();
+    next(1);
 };
 
 export default logger;
