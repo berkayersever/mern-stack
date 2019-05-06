@@ -4,6 +4,8 @@ require('dotenv').config({path: '../../.env'});
 
 import mongoose from 'mongoose';
 
+console.log(process.env.CONNECTION_STRING);
+
 mongoose.connect(process.env.CONNECTION_STRING, {useNewUrlParser: true},
     (err) => {
         if (err) {
@@ -16,4 +18,8 @@ const db = mongoose.connection;
 
 db.on('error', (error) => {
     console.log(error);
+});
+
+db.once('open', () => {
+    console.log('Database connection is open!');
 });

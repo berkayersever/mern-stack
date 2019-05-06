@@ -20,6 +20,7 @@
   "private": true,
   "dependencies": {
     "body-parser": "^1.19.0",
+    "dotenv": "^8.0.0",
     "express": "^4.16.4",
     "mongoose": "^5.5.5",
     "react": "^16.8.6",
@@ -33,7 +34,8 @@
     "eject": "react-scripts eject",
     "server": "babel-node ./server/index.js",
     "nodemon": "nodemon --inspect ./server/index.js --exec babel-node",
-    "test-server": "jest"
+    "test-server": "jest",
+    "db:seed": "nodemon --inspect ./server/scripts/seed.js --exec babel-node"
   },
   "eslintConfig": {
     "extends": "react-app"
