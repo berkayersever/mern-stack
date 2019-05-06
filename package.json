@@ -11,6 +11,10 @@
       "@babel/plugin-proposal-class-properties"
     ]
   },
+  "jest": {
+    "verbose": true,
+    "testPathIgnorePatterns": ["<rootDir>/src/"]
+  },
   "private": true,
   "dependencies": {
     "body-parser": "^1.19.0",
