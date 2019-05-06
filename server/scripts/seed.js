@@ -1,6 +1,9 @@
 // Enables the .env file, therefore add a env property to process object.
 // Recommend to require it at the top of the file
-require('dotenv').config({path: '../../.env'});
+// require('dotenv').config({path: '../.env'});
+import dotenv from 'dotenv';
+dotenv.config({path: '../../.env'});
+console.log(path);
 
 import mongoose from 'mongoose';
 
