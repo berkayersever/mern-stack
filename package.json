@@ -35,7 +35,8 @@
     "server": "babel-node ./server/index.js",
     "nodemon": "nodemon --inspect ./server/index.js --exec babel-node",
     "test-server": "jest",
-    "db:seed": "nodemon --inspect ./server/scripts/seed.js --exec babel-node"
+    "db:seed": "nodemon ./server/scripts/seed.js --exec \"node --require dotenv/config --require @babel/register\"",
+    "db:db": "nodemon ./server/scripts/seed.js --exec \"node --require dotenv/config --require @babel/register\""
   },
   "eslintConfig": {
     "extends": "react-app"
