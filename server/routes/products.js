@@ -51,6 +51,9 @@ export default (app) => {
     });
 
     app.delete('/v1/products/:id', (req, res) => {
+        if (!req.isAdmin) {
+            return res.status(403).end();
+        }
         ProductModel.findByIdAndDelete(req.params.id, (err) => {
             if (err) {
                 res.status(500).end();
