@@ -7,9 +7,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                {products.map((product, index) =>
-                    <ProductCard key={product.id} {...product} pull={index % 2 === 0}/>
-                )}
+
             </div>
         );
     }
