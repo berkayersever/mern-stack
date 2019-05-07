@@ -3,6 +3,8 @@ import bodyParser from 'body-parser';
 import users from './mocks/users';
 import logger from './middleware/logger';
 import withAuthentication from './middleware/withAuthentication';
+import { UserModel } from './models/User';
+import db from './db';
 
 const app = express();
 const port = 3000;
