@@ -48,7 +48,8 @@ export default class Product {
 export const ProductSchema = new Schema({
     name: String,
     price: Number,
-    images: [String]
+    images: [String],
+    categories: [String]
 });
 
 export const ProductModel = mongoose.model('Product', ProductSchema);
