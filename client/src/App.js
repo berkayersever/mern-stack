@@ -1,4 +1,5 @@
 import React from 'react';
+import DynamicCounter from './components/DynamicCounter';
 import logo from './logo.svg';
 import './App.css';
 
@@ -6,6 +7,7 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
+                <DynamicCounter/>
                 <img src={logo} className="App-logo" alt="logo"/>
                 <h1>Hello World!</h1>
                 <p>
