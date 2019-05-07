@@ -34,11 +34,16 @@ app.get('/time', (req, res) =>
 }));
 
 app.get('/v1/users/:id', async (req, res) => {
-    const user = await UserModel.findById(req.params.id);
-    if (user) {
-        res.send(user);
+    try {
+        const user = await UserModel.findById(req.params.id);
+        if (user) {
+            res.send(user);
+        }
+        else {
+            res.status(404).end;
+        }
     }
-    else {
+    catch (e) {
         res.status(404).end;
     }
 });
