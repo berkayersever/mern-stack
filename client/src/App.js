@@ -8,6 +8,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
+                <BaseInput type="text"/>
                 {/*<ProductList products={products} />*/}
             </div>
         );
