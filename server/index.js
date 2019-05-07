@@ -37,7 +37,7 @@ app.get('/v1/users/:id', (req, res) => {
     res.send(users[0]);
 });
 
-app.get('/v1/users', async(req, res) => {
+app.get('/v1/users', async (req, res) => {
     const users = await UserModel.find() || [];
     res.send(users);
 });
