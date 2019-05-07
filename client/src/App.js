@@ -4,6 +4,7 @@ import products from './data/products';
 import TextInput from './components/inputs/TextInput';
 import PasswordInput from './components/inputs/PasswordInput';
 import CheckboxInput from './components/inputs/CheckboxInput';
+import Form from './components/Form';
 import './App.css';
 
 
