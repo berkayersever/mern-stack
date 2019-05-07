@@ -63,12 +63,18 @@ app.post('/v1/users', (req, res) => {
     res.status(200).end();
 });
 
+app.post('/v1/users/register', (req, res) => {
+    // TODO: Implement
+    res.status(200).end();
+});
+
 app.put('/v1/users/:id', (req, res) => {
-    const id = req.params.id;
-    const username = req.body.username;
-    const email = req.body.email;
-    const role = req.body.role;
-    console.log('put: data =>', id, username, email, role);
+    // TODO: Implement
+    // const id = req.params.id;
+    // const username = req.body.username;
+    // const email = req.body.email;
+    // const role = req.body.role;
+    // console.log('put: data =>', id, username, email, role);
     res.status(200).end();
 });
 
