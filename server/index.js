@@ -78,6 +78,12 @@ app.put('/v1/users/:id', (req, res) => {
     res.status(200).end();
 });
 
+app.delete('/v1/users/:id', (req, res) => {
+    // TODO: Implement
+    // console.log('delete: data =>', req.params.id);
+    res.status(200).end();
+});
+
 app.get('/v1/products', async (req, res) => {
     const products = await ProductModel.find() || [];
     res.send(products);
@@ -96,11 +102,6 @@ app.get('/v1/products/:id', async (req, res) => {
     catch (e) {
         res.status(404).end;
     }
-});
-
-app.delete('/v1/users/:id', (req, res) => {
-    console.log('delete: data =>', req.params.id);
-    res.status(200).end();
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
