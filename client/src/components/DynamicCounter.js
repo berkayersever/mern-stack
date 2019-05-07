@@ -7,28 +7,14 @@ const getColor = (value, max, min) => {
 };
 
 class DynamicCounter extends Component {
-    state = { counter: 0 };
-
-    increment = () => {
-        this.setState({
-            counter: this.state.counter + 1
-        });
-    };
-
-    decrement = () => {
-        this.setState({
-            counter: this.state.counter - 1
-        });
-    };
-
     render() {
         return (
             <div>
-                <button onClick={this.increment}>+1</button>
-                <span style={{ padding: 20, color: getColor(this.state.counter, this.props.max, this.props.min) }}>
-                    {this.props.label}: {this.state.counter}
+                <button onClick={this.props.decrement(this.props.label)}>-1</button>
+                <span style={{ padding: 20, color: getColor(this.props.value, this.props.max, this.props.min) }}>
+                    {this.props.label}: {this.props.value}
                 </span>
-                <button onClick={this.decrement}>-1</button>
+                <button onClick={this.props.increment(this.props.label)}>+1</button>
             </div>
         );
     }
