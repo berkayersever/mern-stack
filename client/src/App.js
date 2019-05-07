@@ -5,6 +5,7 @@ import TextInput from './components/inputs/TextInput';
 import PasswordInput from './components/inputs/PasswordInput';
 import CheckboxInput from './components/inputs/CheckboxInput';
 import Form from './components/Form';
+import { PrimaryButton, SecondaryButton } from './components/Button';
 import './App.css';
 
 
@@ -19,10 +20,15 @@ class App extends Component {
         this.setState({ [e.target.name]: e.target.value });
     };
 
+    handleSubmit = e => {
+        e.preventDefault();
+        console.log(this.state);
+    };
+
     render() {
         console.log(this.state);
         return (
-            <Form>
+            <Form onSubmit={this.handleSubmit}>
                 <div className="App">
                     <TextInput
                         label="First Name"
@@ -48,6 +54,9 @@ class App extends Component {
                         name="sendEmail"
                         onChange={this.handleBooleanChange}
                     />
+                    <PrimaryButton>
+                        Submit
+                    </PrimaryButton>
                     {/*<ProductList products={products} />*/}
                 </div>
             </Form>
