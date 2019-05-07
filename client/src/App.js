@@ -7,8 +7,8 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                {products.map((product, index) =>
-                    <ProductCard key={index} {...product}/>
+                {products.map((product) =>
+                    <ProductCard key={product.id} {...product}/>
                 )}
             </div>
         );
