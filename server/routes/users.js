@@ -25,6 +25,9 @@ export default (app) => {
     });
 
     app.post('/v1/users', (req, res) => {
+        if (!req.isAdmin) {
+            return res.status(403).end();
+        }
         // TODO: Implement
         // const username = req.body.username;
         // const email = req.body.email;
