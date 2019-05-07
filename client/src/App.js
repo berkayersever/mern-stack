@@ -7,7 +7,9 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <DynamicCounter/>
+                <DynamicCounter label="Apples"  max={5}  min={0}   />
+                <DynamicCounter label="Oranges" max={10} min={-10} />
+                <DynamicCounter label="Lemons"  max={1}  min={-1}  />
                 <img src={logo} className="App-logo" alt="logo"/>
                 <h1>Hello World!</h1>
                 <p>
