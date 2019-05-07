@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ProductCard from "./components/ProductCard";
+import products from './data/products';
 import './App.css';
 
 const images = [
@@ -11,7 +12,9 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <ProductCard images={images} name="Pikachu" price="$49.99"/>
+                {products.map(product =>
+                    <ProductCard {...product}/>
+                )}
             </div>
         );
     }
