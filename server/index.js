@@ -104,4 +104,14 @@ app.get('/v1/products/:id', async (req, res) => {
     }
 });
 
+app.post('/v1/products', async (req, res) => {
+    const product = await ProductModel.create(req.body);
+    if (product) {
+        res.status(200).end();
+    }
+    else {
+        res.status(500).end();
+    }
+});
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
