@@ -33,8 +33,14 @@ app.get('/time', (req, res) =>
     res.send({ datetime: new Date().toJSON()
 }));
 
-app.get('/v1/users/:id', (req, res) => {
-    res.send(users[0]);
+app.get('/v1/users/:id', async (req, res) => {
+    const user = await UserModel.findById(req.params.id);
+    if (user) {
+        res.send(user);
+    }
+    else {
+        res.status(404).end;
+    }
 });
 
 app.get('/v1/users', async (req, res) => {
