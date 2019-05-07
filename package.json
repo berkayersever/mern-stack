@@ -19,6 +19,7 @@
   },
   "private": true,
   "dependencies": {
+    "@babel/polyfill": "^7.4.4",
     "body-parser": "^1.19.0",
     "dotenv": "^8.0.0",
     "express": "^4.16.4",
@@ -34,6 +35,7 @@
     "eject": "react-scripts eject",
     "server": "babel-node ./server/index.js",
     "nodemon": "nodemon --inspect ./server/index.js --exec babel-node",
+    "nodemon2": "nodemon ./server/index.js --exec \"node --require dotenv/config --require @babel/register\"",
     "test-server": "jest",
     "db:seed": "nodemon ./server/scripts/seed.js --exec \"node --require dotenv/config --require @babel/register\"",
     "db:db": "nodemon ./server/scripts/seed.js --exec \"node --require dotenv/config --require @babel/register\""
