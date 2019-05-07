@@ -125,4 +125,15 @@ app.put('/v1/products/:id', (req, res) => {
     });
 });
 
+app.delete('/v1/products/:id', (req, res) => {
+    ProductModel.findByIdAndDelete(req.params.id, (err) => {
+        if (err) {
+            res.status(500).end();
+        }
+        else {
+            res.status(200).end();
+        }
+    });
+});
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
