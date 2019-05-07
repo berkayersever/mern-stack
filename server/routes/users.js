@@ -42,6 +42,9 @@ export default (app) => {
     });
 
     app.put('/v1/users/:id', (req, res) => {
+        if (!req.isAdmin) {
+            return res.status(403).end();
+        }
         // TODO: Implement
         // const id = req.params.id;
         // const username = req.body.username;
