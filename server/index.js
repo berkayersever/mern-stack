@@ -114,4 +114,15 @@ app.post('/v1/products', async (req, res) => {
     }
 });
 
+app.put('/v1/products/:id', (req, res) => {
+    ProductModel.findByIdAndUpdate(req.params.id, req.body, (err) => {
+        if (err) {
+            res.status(500).end();
+        }
+        else {
+            res.status(200).end();
+        }
+    });
+});
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
