@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ProductList from "./components/ProductList";
 import products from './data/products';
 import TextInput from './components/inputs/TextInput';
