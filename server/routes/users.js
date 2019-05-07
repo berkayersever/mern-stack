@@ -55,6 +55,9 @@ export default (app) => {
     });
 
     app.delete('/v1/users/:id', (req, res) => {
+        if (!req.isAdmin) {
+            return res.status(403).end();
+        }
         // TODO: Implement
         // console.log('delete: data =>', req.params.id);
         res.status(200).end();
