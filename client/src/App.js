@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import NavigationBar from './components/NavigationBar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import FormDemo from './pages/FormDemo';
@@ -11,10 +12,10 @@ import './App.css';
 
 class App extends Component {
     render() {
-        console.log(this.state);
         return (
-            <div className="App">
-                <Router>
+            <Router>
+                <div className="App">
+                    <NavigationBar isLoggedIn={true}/>
                     <Switch>
                         <Route path="/" exact component={Home}/>
                         <Route path="/forms" exact component={FormDemo}/>
@@ -24,8 +25,8 @@ class App extends Component {
                         <Route path="/category/:slug" component={Category}/>
                         <Route component={NotFound}/>
                     </Switch>
-                </Router>
-            </div>
+                </div>
+            </Router>
         );
     }
 }
