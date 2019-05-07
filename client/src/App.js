@@ -22,10 +22,30 @@ class App extends Component {
         console.log(this.state);
         return (
             <div className="App">
-                <TextInput     value={this.state.firstName}    name="firstName" onChange={this.handleTextChange}    />
-                <TextInput     value={this.state.lastName }    name="lastName"  onChange={this.handleTextChange}    />
-                <PasswordInput value={this.state.password }    name="password"  onChange={this.handleTextChange}    />
-                <CheckboxInput checked={this.state.sendEmail } name="sendEmail" onChange={this.handleBooleanChange} />
+                <TextInput
+                    label="First Name"
+                    value={this.state.firstName}
+                    name="firstName"
+                    onChange={this.handleTextChange}
+                />
+                <TextInput
+                    label="Last Name"
+                    value={this.state.lastName }
+                    name="lastName"
+                    onChange={this.handleTextChange}
+                />
+                <PasswordInput
+                    label="Password"
+                    value={this.state.password }
+                    name="password"
+                    onChange={this.handleTextChange}
+                />
+                <CheckboxInput
+                    label="Can we send you promotional emails?"
+                    checked={this.state.sendEmail }
+                    name="sendEmail"
+                    onChange={this.handleBooleanChange}
+                />
                 {/*<ProductList products={products} />*/}
             </div>
         );
