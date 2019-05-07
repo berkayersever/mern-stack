@@ -24,6 +24,9 @@ export default (app) => {
     });
 
     app.post('/v1/products', async (req, res) => {
+        if (!req.isAdmin) {
+            return res.status(403).end();
+        }
         const product = await ProductModel.create(req.body);
         if (product) {
             res.status(200).end();
