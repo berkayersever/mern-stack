@@ -1,5 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import regeneratorRuntime from "regenerator-runtime";
 import users from './mocks/users';
 import logger from './middleware/logger';
 import withAuthentication from './middleware/withAuthentication';
@@ -36,7 +37,8 @@ app.get('/v1/users/:id', (req, res) => {
     res.send(users[0]);
 });
 
-app.get('/v1/users', (req, res) => {
+app.get('/v1/users', async(req, res) => {
+    const users = await UserModel.find() || [];
     res.send(users);
 });
 
