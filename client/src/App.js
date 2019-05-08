@@ -12,6 +12,8 @@ import Cart from './pages/Cart';
 import Account from './pages/Account';
 import UserManagement from './pages/admin/UserManagement';
 import ProductManagement from './pages/admin/ProductManagement';
+import Auth from './pages/Auth';
+import { getCurrentUser } from './api/Auth';
 
 import './App.css';
 
