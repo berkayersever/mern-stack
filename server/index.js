@@ -6,10 +6,11 @@ import logger from './middleware/logger';
 import withAuthentication from './middleware/withAuthentication';
 import getUserRoutes from './routes/users';
 import getProductRoutes from './routes/products';
+import getAuthRoutes from './routes/auth';
 import db from './db';
 
 const app = express();
-const port = 8055;
+const port = process.env.PORT;
 const secret = process.env.JWT_SECRET;
 // console.log("secret: ", secret);
 app.use(cors());
