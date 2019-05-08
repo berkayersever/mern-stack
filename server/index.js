@@ -20,6 +20,7 @@ app.use(withAuthentication);
 app.use(logger);
 getUserRoutes(app);
 getProductRoutes(app);
+getAuthRoutes(app);
 
 app.get('/time', (req, res) =>
     res.send({ datetime: new Date().toJSON()
