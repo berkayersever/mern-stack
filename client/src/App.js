@@ -28,6 +28,7 @@ class App extends Component {
     }
 
     componentDidMount = () => {
+        this.authUser();
         document.addEventListener(
             'visibilitychange',
             () => {
@@ -35,6 +36,7 @@ class App extends Component {
                     this.setState({
                         itemsInCart: store.get('itemsInCart') || []
                     });
+                    this.authUser();
                 }
             }
         );
