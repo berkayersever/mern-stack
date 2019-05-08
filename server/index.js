@@ -8,6 +8,7 @@ import withAuthentication from './middleware/withAuthentication';
 import getUserRoutes from './routes/users';
 import getProductRoutes from './routes/products';
 import getAuthRoutes from './routes/auth';
+import getOrderRoutes from './routes/orders';
 import db from './db';
 
 const app = express();
@@ -23,6 +24,7 @@ app.use(logger);
 getUserRoutes(app);
 getProductRoutes(app);
 getAuthRoutes(app);
+getOrderRoutes(app);
 
 app.get('/time', (req, res) =>
     res.send({ datetime: new Date().toJSON()
