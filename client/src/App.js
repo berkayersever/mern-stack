@@ -5,12 +5,19 @@ import Home from './pages/Home';
 import FormDemo from './pages/FormDemo';
 import NotFound from './pages/NotFound';
 import Category from './pages/Category';
+import Product from './pages/Product';
 import Orders from './pages/Orders';
 import Cart from './pages/Cart';
 import Account from './pages/Account';
 import './App.css';
 
 class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { itemsInCart: [] };
+        this.ProductPage = Product(this.addToCart);
+    }
+
     render() {
         return (
             <Router>
