@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ProductList from '../components/ProductList';
+import ProductList from '../components/product/ProductList';
 import { getProducts } from '../api/Products';
 import LoadingIndicator from '../components/LoadingIndicator';
 
@@ -13,7 +13,9 @@ export default class Home extends Component {
 
     render() {
         return (
-            this.state.loading ? <LoadingIndicator/> : <ProductList products={this.state.products}/>
+            this.state.loading ?
+                <LoadingIndicator/> :
+            <ProductList products={this.state.products} />
         );
     }
 }

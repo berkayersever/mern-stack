@@ -10,10 +10,12 @@
     "react-scripts": "3.0.0"
   },
   "scripts": {
-    "start": "REACT_APP_API_URL=http://localhost:8055 react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deneme": "REACT_APP_API_URL=http://localhost:8055 react-scripts start",
+    "deneme2": "set REACT_APP_API_URL=http://localhost:8055 && react-scripts start"
   },
   "eslintConfig": {
     "extends": "react-app"
