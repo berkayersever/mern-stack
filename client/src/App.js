@@ -47,6 +47,9 @@ class App extends Component {
         if (result && result.data) {
             this.setState({ user: result.data })
         }
+        else {
+            this.setState({ user: undefined });
+        }
     };
 
     addToCart = (item) => {
