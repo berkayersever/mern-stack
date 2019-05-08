@@ -8,12 +8,12 @@ export default class Home extends Component {
 
     componentDidMount = async () => {
         const products = await getProducts() || [];
-        this.setState({products, loading: false});
+        this.setState({ products, loading: false });
     };
 
     render() {
         return (
-            this.state.loading ? <LoadingIndicator/> :<ProductList products={this.state.products}/>
+            this.state.loading ? <LoadingIndicator /> : <ProductList products={this.state.products}/>
         );
     }
 }

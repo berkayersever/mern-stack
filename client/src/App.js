@@ -22,7 +22,7 @@ class App extends Component {
         super(props);
         this.state = {
             itemsInCart: store.get('itemsInCart') || [],
-            user: undefined
+            user: undefined,
         };
         this.ProductPage = Product(this.addToCart);
     }
@@ -46,8 +46,7 @@ class App extends Component {
         const result = await getCurrentUser();
         if (result && result.data) {
             this.setState({ user: result.data })
-        }
-        else {
+        } else {
             this.setState({ user: undefined });
         }
     };
@@ -66,31 +65,51 @@ class App extends Component {
         store.set('itemsInCart', itemsInCart);
     };
 
+    emptyCart = () => {
+        this.setState({ itemsInCart: [] });
+        store.set('itemsInCart', []);
+    };
+
     render() {
         const isLoggedIn = this.state.user && this.state.user._id;
         return (
             <Router>
                 <div className="App">
-                    <NavigationBar isLoggedIn={isLoggedIn} itemsInCart={this.state.itemsInCart.length}/>
+                    <NavigationBar
+                        isLoggedIn={isLoggedIn}
+                        itemsInCart={this.state.itemsInCart.length}
+                    />
                     <Switch>
-                        <Route path="/" exact component={Home}/>
-                        <Route path="/auth/:token" exact component={Auth(this.authUser)}/>
-                        <Route path="/forms" exact component={FormDemo}/>
+                        <Route path="/" exact component={Home} />
+                        <Route path="/auth/:token" exact component={Auth(this.authUser)} />
+                        <Route path="/forms" exact component={FormDemo} />
                         <Route
                             path="/cart"
                             exact
-                            component={props => <Cart {...props} items={this.state.itemsInCart } removeFromCart={this.removeFromCart}/>}
+                            render={props =>
+                                <Cart
+                                    {...props}
+                                    items={this.state.itemsInCart}
+                                    removeFromCart={this.removeFromCart}
+                                    emptyCart={this.emptyCart}
+                                />
+                            }
                         />
-                        <Route path="/orders" exact component={Orders}/>
-                        <Route path="/account" exact component={Account}/>
-                        <Route path="/category/:slug" component={Category}/>
-                        <Route path="/product/:id" component={this.ProductPage}/>
-                        {isLoggedIn && this.state.user.role === 'admin' && <Route path="/admin/users" exact component={UserManagement}/>}
-                        {isLoggedIn && this.state.user.role === 'admin' && <Route path="/admin/products" exact component={ProductManagement}/>}
-                        <Route component={NotFound}/>
+                        <Route path="/orders" exact component={Orders} />
+                        <Route path="/account" exact component={Account} />
+                        <Route path="/category/:slug" component={Category} />
+                        <Route path="/product/:id" component={this.ProductPage} />
+
+                        {isLoggedIn && this.state.user.role === 'admin' &&
+                        <Route path="/admin/users" exact component={UserManagement} />}
+                        {isLoggedIn && this.state.user.role === 'admin' &&
+                        <Route path="/admin/products" exact component={ProductManagement} />}
+
+                        <Route component={NotFound} />
                     </Switch>
                 </div>
             </Router>
+
         );
     }
 }
