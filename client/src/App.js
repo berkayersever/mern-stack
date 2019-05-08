@@ -40,6 +40,13 @@ class App extends Component {
         );
     };
 
+    authUser = async () => {
+        const result = await getCurrentUser();
+        if (result && result.data) {
+            this.setState({ user: result.data })
+        }
+    };
+
     addToCart = (item) => {
         const { itemsInCart } = this.state;
         itemsInCart.push(item);
