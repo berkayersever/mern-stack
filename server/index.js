@@ -1,5 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import cors from 'cors';
 import regeneratorRuntime from "regenerator-runtime";
 import logger from './middleware/logger';
 import withAuthentication from './middleware/withAuthentication';
@@ -9,6 +10,7 @@ import db from './db';
 
 const app = express();
 const port = 3000;
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(withAuthentication);
