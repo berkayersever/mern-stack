@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import './ProductCard.css';
+import { SecondaryButton } from '../Button';
 
 export default class ProductCard extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            image: this.props.images[0]
+            image: this.props.images[0],
         };
     }
-    state = { image: this.props.images[0] };
 
     handleMouseOver = () => {
         if (this.props.images.length > 1) {
@@ -22,10 +22,19 @@ export default class ProductCard extends Component {
 
     render() {
         return (
-            <div className="ProductCard" style={this.props.pull ? { alignSelf: 'flex-end' } : null }>
-                <img src={this.state.image} onMouseOver={this.handleMouseOver} onMouseLeave={this.handleMouseLeave} alt={"Pikachu"}/>
+            <div className="ProductCard">
+                <img
+                    src={this.state.image}
+                    onMouseOver={this.handleMouseOver}
+                    onMouseLeave={this.handleMouseLeave}
+                />
                 <h3>{this.props.name}</h3>
                 <p>{this.props.price}</p>
+                {this.props.withRemoveButton &&
+                <SecondaryButton onClick={this.props.onRemove}>
+                    Remove
+                </SecondaryButton>
+                }
             </div>
         )
     }
