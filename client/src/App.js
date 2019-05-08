@@ -20,7 +20,10 @@ import './App.css';
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state = { itemsInCart: store.get('itemsInCart') || [] };
+        this.state = {
+            itemsInCart: store.get('itemsInCart') || [],
+            user: undefined
+        };
         this.ProductPage = Product(this.addToCart);
     }
 
