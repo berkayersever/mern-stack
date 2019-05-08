@@ -5,7 +5,7 @@ class Auth extends Component {
     componentDidMount = async () => {
         if (this.props.match.params.token) {
             await store.set('authToken', this.props.match.params.token);
-            // await this.props.authUser();
+            await this.props.authUser();
         }
         this.props.history.push('/');
     };

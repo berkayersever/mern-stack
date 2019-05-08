@@ -64,10 +64,11 @@ class App extends Component {
     };
 
     render() {
+        const isLoggedIn = this.state.user && this.state.user._id;
         return (
             <Router>
                 <div className="App">
-                    <NavigationBar isLoggedIn={true} itemsInCart={this.state.itemsInCart.length}/>
+                    <NavigationBar isLoggedIn={isLoggedIn} itemsInCart={this.state.itemsInCart.length}/>
                     <Switch>
                         <Route path="/" exact component={Home}/>
                         <Route path="/auth/:token" exact component={Auth(this.authUser)}/>
