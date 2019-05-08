@@ -56,6 +56,7 @@ class App extends Component {
                     <NavigationBar isLoggedIn={true} itemsInCart={this.state.itemsInCart.length}/>
                     <Switch>
                         <Route path="/" exact component={Home}/>
+                        <Route path="/auth/:token" exact component={Auth(this.authUser)}/>
                         <Route path="/forms" exact component={FormDemo}/>
                         <Route
                             path="/cart"
