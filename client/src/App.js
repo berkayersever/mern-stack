@@ -15,7 +15,7 @@ class App extends Component {
         return (
             <Router>
                 <div className="App">
-                    <NavigationBar isLoggedIn={true}/>
+                    <NavigationBar isLoggedIn={true} itemsInCart={this.state.itemsInCart.length}/>
                     <Switch>
                         <Route path="/" exact component={Home}/>
                         <Route path="/forms" exact component={FormDemo}/>
@@ -23,6 +23,7 @@ class App extends Component {
                         <Route path="/orders" exact component={Orders}/>
                         <Route path="/account" exact component={Account}/>
                         <Route path="/category/:slug" component={Category}/>
+                        <Route path="/product/:id" component={this.ProductPage} />
                         <Route component={NotFound}/>
                     </Switch>
                 </div>
