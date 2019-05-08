@@ -3,7 +3,7 @@ import './Button.css';
 
 class Button extends Component {
     render() {
-        const { className, children, rest } = this.props;
+        const { className, children, ...rest } = this.props;
         return (
             <button className={className} {...rest}>
                 {children}
@@ -15,7 +15,10 @@ class Button extends Component {
 export class PrimaryButton extends Component {
     render() {
         return (
-            <Button className="BaseButton PrimaryButton" {...this.props}/>
+            <Button
+                className="BaseButton PrimaryButton"
+                {...this.props}
+            />
         );
     }
 }
@@ -23,7 +26,10 @@ export class PrimaryButton extends Component {
 export class SecondaryButton extends Component {
     render() {
         return (
-            <Button className="BaseButton SecondaryButton" {...this.props}/>
+            <Button
+                className="BaseButton SecondaryButton"
+                {...this.props}
+            />
         );
     }
 }

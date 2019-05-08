@@ -1,15 +1,13 @@
-const logger = (req, res, next) => {    // Logger Middleware
+export default (req, res, next) => {
     console.log(
         '=> ',
         req.method,
         req.originalUrl,
         ' || ',
         'isAuthenticated: ',
-        req.isAuthenticated,
-        'isAdmin: ',
+        typeof req.user === 'object',
+        'is Admin: ',
         req.isAdmin
     );
     next();
 };
-
-export default logger;

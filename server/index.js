@@ -10,6 +10,8 @@ import db from './db';
 
 const app = express();
 const port = 8055;
+const secret = process.env.JWT_SECRET;
+// console.log("secret: ", secret);
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
