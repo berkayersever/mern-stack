@@ -30,7 +30,10 @@ export default class ProductCard extends Component {
                     onMouseLeave={this.handleMouseLeave}
                 />
                 <h3>{this.props.name}</h3>
-                <p>{this.props.price}</p>
+                <p>
+                    {this.props.price}
+                    {this.props.isFeatured && <TopProductLabel />}
+                </p>
                 {this.props.withRemoveButton &&
                 <SecondaryButton onClick={this.props.onRemove}>
                     Remove
