@@ -6,10 +6,10 @@ export default class BaseInput extends Component {
     render() {
         return (
             <div className={ `BaseInput ${this.props.type === 'checkbox' ? 'BaseInputReverse' : ''}` }>
-                <label htmlFor={this.props.name}>
+                <label htmlFor={this.props.name} data-testid="baseInputLabel">
                     {this.props.label}
                 </label>
-                <input id={this.props.name} {...this.props} />
+                <input data-testid="baseInput" id={this.props.name} {...this.props} />
             </div>
         )
     }
