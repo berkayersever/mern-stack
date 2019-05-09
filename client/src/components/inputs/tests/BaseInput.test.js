@@ -44,7 +44,7 @@ test('Should match snapshot', () => {
             name="firstName"
             label="First Name"
             type="text"
-            onChange={mockCallback}
+            onChange={() => {}}
         />
     );
     expect(output.toJSON()).toMatchSnapshot();
