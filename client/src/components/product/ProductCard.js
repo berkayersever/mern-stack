@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './ProductCard.css';
 import { SecondaryButton } from '../Button';
+import TopProductLabel from './TopProductLabel';
 
 export default class ProductCard extends Component {
     constructor(props) {
