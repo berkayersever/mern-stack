@@ -1,6 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
+import helmet from 'helmet';
 import regeneratorRuntime from "regenerator-runtime";
 import logger from './middleware/logger';
 import withAdminPermission from './middleware/withAdminPermission';
