@@ -11,7 +11,6 @@ test('It sums the total price correctly', () => {
         ],
     };
     const order = new Order(raw);
-
     expect(order.getTotalPrice()).toEqual(2500);
     expect(order.getFormattedTotalPrice()).toEqual('$25');
 });
