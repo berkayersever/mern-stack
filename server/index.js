@@ -14,7 +14,7 @@ import db from './db';
 
 const app = express();
 const port = process.env.PORT;
-const secret = process.env.JWT_SECRET;
+// const secret = process.env.JWT_SECRET;
 app.use(helmet());
 app.use(compression());
 app.use(cors());
