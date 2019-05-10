@@ -32,7 +32,6 @@
   },
   "scripts": {
     "start": "nodemon ./server/index.js --exec \"node --require dotenv/config --require @babel/register\"",
-    "eject": "react-scripts eject",
     "server": "babel-node ./server/index.js",
     "nodemon": "nodemon --inspect ./server/index.js --exec babel-node",
     "nodemon2": "nodemon ./server/index.js --exec \"node --require dotenv/config --require @babel/register\"",
