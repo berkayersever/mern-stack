@@ -2,14 +2,6 @@
   "name": "mern-stack",
   "version": "0.1.0",
   "main": "./server/index.js",
-  "babel": {
-    "presets": [
-      "@babel/preset-env"
-    ],
-    "plugins": [
-      "@babel/plugin-proposal-class-properties"
-    ]
-  },
   "jest": {
     "verbose": true,
     "testPathIgnorePatterns": [
