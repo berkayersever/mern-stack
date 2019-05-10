@@ -29,7 +29,6 @@
     "helmet": "^3.18.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.5.5",
-    "react-dom": "^16.8.6",
     "react-scripts": "3.0.0"
   },
   "scripts": {
