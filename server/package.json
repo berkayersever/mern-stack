@@ -31,7 +31,7 @@
     "mongoose": "^5.5.5"
   },
   "scripts": {
-    "start": "nodemon ./server/index.js --exec \"node --require dotenv/config --require @babel/register\"",
+    "start": "nodemon ./index.js --exec \"node --require dotenv/config --require @babel/register\"",
     "server": "babel-node ./server/index.js",
     "nodemon": "nodemon --inspect ./server/index.js --exec babel-node",
     "nodemon2": "nodemon ./server/index.js --exec \"node --require dotenv/config --require @babel/register\"",
