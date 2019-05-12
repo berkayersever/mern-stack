@@ -1,0 +1,22 @@
+.PokemonCard {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.PokemonCard img {
+    width: 400px;
+}
+
+.PokemonCard h3 {
+    font-family: Monaco, monospace;
+}
+
+.PokemonCard p {
+    font-family: "Courier New", monospace;
+}
+
+.PokemonCard h3,
+.PokemonCard p {
+    margin: 0 0 0.5rem 0;
+}
