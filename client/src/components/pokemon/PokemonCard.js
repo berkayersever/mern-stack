@@ -45,7 +45,7 @@ export default class PokemonCard extends Component {
     }
 };
 
-ProductCard.propTypes = {
+PokemonCard.propTypes = {
     name: PropTypes.string.isRequired,
     price: PropTypes.string.isRequired,
     images: PropTypes.arrayOf(PropTypes.string),
