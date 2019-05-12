@@ -2,6 +2,7 @@ import mongoose from 'mongoose';
 import { users, products, pokemons } from './data';
 import { UserModel} from '../models/User';
 import { ProductModel } from '../models/Product';
+import { PokemonModel } from "../models/Pokemon";
 
 mongoose.connect(process.env.CONNECTION_STRING, {useNewUrlParser: true},
     (err) => {
