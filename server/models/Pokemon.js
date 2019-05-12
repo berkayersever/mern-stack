@@ -18,4 +18,4 @@ export const PokemonSchema = new Schema({
     legendary: Boolean
 });
 
-export const PokemonModel = mongoose.model('Pokemon', ProductSchema);
+export const PokemonModel = mongoose.model('Pokemon', PokemonSchema);

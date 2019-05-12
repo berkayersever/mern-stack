@@ -30,7 +30,7 @@ db.once('open', () => {
             console.log(error);
         }
     });
-    ProductModel.insertMany(pokemons, (error) => {
+    PokemonModel.insertMany(pokemons, (error) => {
         if (error) {
             console.log(error);
         }
