@@ -7,7 +7,7 @@ export default class Pokemon {
      * @param {boolean} featured
      * @param {boolean} legendary
      */
-    constructor({ id, name, price, images, featured }) {
+    constructor({ id, name, price, images, featured, legendary }) {
         this._id = id;
         this._name = name;
         this._price = price;

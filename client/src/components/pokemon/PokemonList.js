@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import PokemonCard from './ProductCard';
+import PokemonCard from './PokemonCard';
 import './PokemonList.css';
 
 export default class PokemonList extends Component {
