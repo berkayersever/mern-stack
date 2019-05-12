@@ -20,16 +20,16 @@ db.on('error', (error) => {
 
 db.once('open', () => {
     console.log('Database connection is open!');
-    UserModel.insertMany(users, (error) => {
-        if (error) {
-            console.log(error);
-        }
-    });
-    ProductModel.insertMany(products, (error) => {
-        if (error) {
-            console.log(error);
-        }
-    });
+    // UserModel.insertMany(users, (error) => {
+    //     if (error) {
+    //         console.log(error);
+    //     }
+    // });
+    // ProductModel.insertMany(products, (error) => {
+    //     if (error) {
+    //         console.log(error);
+    //     }
+    // });
     PokemonModel.insertMany(pokemons, (error) => {
         if (error) {
             console.log(error);

@@ -2486,7 +2486,7 @@ export const pokemons = [
         sp_def: 125,
         speed: 85,
         generation: 1,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 145,
@@ -2503,7 +2503,7 @@ export const pokemons = [
         sp_def: 90,
         speed: 100,
         generation: 1,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 146,
@@ -2520,7 +2520,7 @@ export const pokemons = [
         sp_def: 85,
         speed: 90,
         generation: 1,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 147,
@@ -2588,7 +2588,7 @@ export const pokemons = [
         sp_def: 120,
         speed: 140,
         generation: 1,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 151,
@@ -2605,7 +2605,7 @@ export const pokemons = [
         sp_def: 100,
         speed: 100,
         generation: 1,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 152,
@@ -4169,7 +4169,7 @@ export const pokemons = [
         sp_def: 100,
         speed: 115,
         generation: 2,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 244,
@@ -4186,7 +4186,7 @@ export const pokemons = [
         sp_def: 75,
         speed: 100,
         generation: 2,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 245,
@@ -4203,7 +4203,7 @@ export const pokemons = [
         sp_def: 115,
         speed: 85,
         generation: 2,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 246,
@@ -4271,7 +4271,7 @@ export const pokemons = [
         sp_def: 154,
         speed: 110,
         generation: 2,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 250,
@@ -4288,7 +4288,7 @@ export const pokemons = [
         sp_def: 154,
         speed: 90,
         generation: 2,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 251,
@@ -4305,7 +4305,7 @@ export const pokemons = [
         sp_def: 100,
         speed: 100,
         generation: 2,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 252,
@@ -6447,7 +6447,7 @@ export const pokemons = [
         sp_def: 100,
         speed: 50,
         generation: 3,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 378,
@@ -6464,7 +6464,7 @@ export const pokemons = [
         sp_def: 200,
         speed: 50,
         generation: 3,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 379,
@@ -6481,7 +6481,7 @@ export const pokemons = [
         sp_def: 150,
         speed: 50,
         generation: 3,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 380,
@@ -6498,7 +6498,7 @@ export const pokemons = [
         sp_def: 150,
         speed: 110,
         generation: 3,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 381,
@@ -6515,7 +6515,7 @@ export const pokemons = [
         sp_def: 120,
         speed: 110,
         generation: 3,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 382,
@@ -6532,7 +6532,7 @@ export const pokemons = [
         sp_def: 160,
         speed: 90,
         generation: 3,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 383,
@@ -6549,7 +6549,7 @@ export const pokemons = [
         sp_def: 90,
         speed: 90,
         generation: 3,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 384,
@@ -6566,7 +6566,7 @@ export const pokemons = [
         sp_def: 100,
         speed: 115,
         generation: 3,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 385,
@@ -6583,7 +6583,7 @@ export const pokemons = [
         sp_def: 100,
         speed: 100,
         generation: 3,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 386,
@@ -6600,7 +6600,7 @@ export const pokemons = [
         sp_def: 90,
         speed: 180,
         generation: 3,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 387,
@@ -8198,7 +8198,7 @@ export const pokemons = [
         sp_def: 130,
         speed: 95,
         generation: 4,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 481,
@@ -8215,7 +8215,7 @@ export const pokemons = [
         sp_def: 105,
         speed: 80,
         generation: 4,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 482,
@@ -8232,7 +8232,7 @@ export const pokemons = [
         sp_def: 70,
         speed: 115,
         generation: 4,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 483,
@@ -8249,7 +8249,7 @@ export const pokemons = [
         sp_def: 100,
         speed: 90,
         generation: 4,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 484,
@@ -8266,7 +8266,7 @@ export const pokemons = [
         sp_def: 120,
         speed: 100,
         generation: 4,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 485,
@@ -8283,7 +8283,7 @@ export const pokemons = [
         sp_def: 106,
         speed: 77,
         generation: 4,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 486,
@@ -8300,7 +8300,7 @@ export const pokemons = [
         sp_def: 110,
         speed: 100,
         generation: 4,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 487,
@@ -8317,7 +8317,7 @@ export const pokemons = [
         sp_def: 100,
         speed: 90,
         generation: 4,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 488,
@@ -8334,7 +8334,7 @@ export const pokemons = [
         sp_def: 130,
         speed: 85,
         generation: 4,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 489,
@@ -8368,7 +8368,7 @@ export const pokemons = [
         sp_def: 100,
         speed: 100,
         generation: 4,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 491,
@@ -8385,7 +8385,7 @@ export const pokemons = [
         sp_def: 90,
         speed: 125,
         generation: 4,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 492,
@@ -8402,7 +8402,7 @@ export const pokemons = [
         sp_def: 75,
         speed: 127,
         generation: 4,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 493,
@@ -8419,7 +8419,7 @@ export const pokemons = [
         sp_def: 120,
         speed: 120,
         generation: 4,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 494,
@@ -8436,7 +8436,7 @@ export const pokemons = [
         sp_def: 100,
         speed: 100,
         generation: 5,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 495,
@@ -10884,7 +10884,7 @@ export const pokemons = [
         sp_def: 72,
         speed: 108,
         generation: 5,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 639,
@@ -10901,7 +10901,7 @@ export const pokemons = [
         sp_def: 90,
         speed: 108,
         generation: 5,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 640,
@@ -10918,7 +10918,7 @@ export const pokemons = [
         sp_def: 129,
         speed: 108,
         generation: 5,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 641,
@@ -10935,7 +10935,7 @@ export const pokemons = [
         sp_def: 90,
         speed: 121,
         generation: 5,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 642,
@@ -10952,7 +10952,7 @@ export const pokemons = [
         sp_def: 80,
         speed: 101,
         generation: 5,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 643,
@@ -10969,7 +10969,7 @@ export const pokemons = [
         sp_def: 120,
         speed: 90,
         generation: 5,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 644,
@@ -10986,7 +10986,7 @@ export const pokemons = [
         sp_def: 100,
         speed: 90,
         generation: 5,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 645,
@@ -11003,7 +11003,7 @@ export const pokemons = [
         sp_def: 80,
         speed: 91,
         generation: 5,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 646,
@@ -11020,7 +11020,7 @@ export const pokemons = [
         sp_def: 100,
         speed: 95,
         generation: 5,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 647,
@@ -11037,7 +11037,7 @@ export const pokemons = [
         sp_def: 90,
         speed: 108,
         generation: 5,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 648,
@@ -11054,7 +11054,7 @@ export const pokemons = [
         sp_def: 77,
         speed: 128,
         generation: 5,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 649,
@@ -11071,7 +11071,7 @@ export const pokemons = [
         sp_def: 95,
         speed: 99,
         generation: 5,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 650,
@@ -12210,7 +12210,7 @@ export const pokemons = [
         sp_def: 98,
         speed: 99,
         generation: 6,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 717,
@@ -12227,7 +12227,7 @@ export const pokemons = [
         sp_def: 98,
         speed: 99,
         generation: 6,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 718,
@@ -12244,7 +12244,7 @@ export const pokemons = [
         sp_def: 95,
         speed: 85,
         generation: 6,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 719,
@@ -12261,7 +12261,7 @@ export const pokemons = [
         sp_def: 110,
         speed: 110,
         generation: 6,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 720,
@@ -12278,7 +12278,7 @@ export const pokemons = [
         sp_def: 130,
         speed: 80,
         generation: 6,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 721,
@@ -12295,7 +12295,7 @@ export const pokemons = [
         sp_def: 90,
         speed: 70,
         generation: 6,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 722,
@@ -13383,7 +13383,7 @@ export const pokemons = [
         sp_def: 75,
         speed: 130,
         generation: 7,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 786,
@@ -13400,7 +13400,7 @@ export const pokemons = [
         sp_def: 115,
         speed: 95,
         generation: 7,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 787,
@@ -13417,7 +13417,7 @@ export const pokemons = [
         sp_def: 95,
         speed: 75,
         generation: 7,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 788,
@@ -13434,7 +13434,7 @@ export const pokemons = [
         sp_def: 130,
         speed: 85,
         generation: 7,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 789,
@@ -13451,7 +13451,7 @@ export const pokemons = [
         sp_def: 31,
         speed: 37,
         generation: 7,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 790,
@@ -13468,7 +13468,7 @@ export const pokemons = [
         sp_def: 131,
         speed: 37,
         generation: 7,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 791,
@@ -13485,7 +13485,7 @@ export const pokemons = [
         sp_def: 89,
         speed: 97,
         generation: 7,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 792,
@@ -13502,7 +13502,7 @@ export const pokemons = [
         sp_def: 107,
         speed: 97,
         generation: 7,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 793,
@@ -13519,7 +13519,7 @@ export const pokemons = [
         sp_def: 131,
         speed: 103,
         generation: 7,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 794,
@@ -13536,7 +13536,7 @@ export const pokemons = [
         sp_def: 53,
         speed: 79,
         generation: 7,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 795,
@@ -13553,7 +13553,7 @@ export const pokemons = [
         sp_def: 37,
         speed: 151,
         generation: 7,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 796,
@@ -13570,7 +13570,7 @@ export const pokemons = [
         sp_def: 71,
         speed: 83,
         generation: 7,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 797,
@@ -13587,7 +13587,7 @@ export const pokemons = [
         sp_def: 101,
         speed: 61,
         generation: 7,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 798,
@@ -13604,7 +13604,7 @@ export const pokemons = [
         sp_def: 31,
         speed: 109,
         generation: 7,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 799,
@@ -13621,7 +13621,7 @@ export const pokemons = [
         sp_def: 53,
         speed: 43,
         generation: 7,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 800,
@@ -13638,7 +13638,7 @@ export const pokemons = [
         sp_def: 89,
         speed: 79,
         generation: 7,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 801,
@@ -13655,7 +13655,7 @@ export const pokemons = [
         sp_def: 115,
         speed: 65,
         generation: 7,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 802,
@@ -13672,7 +13672,7 @@ export const pokemons = [
         sp_def: 90,
         speed: 125,
         generation: 7,
-        legendary: 'TRUE'
+        legendary: true
     },
     {
         id: 803,

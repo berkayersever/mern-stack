@@ -29,7 +29,7 @@
     "nodemon2": "nodemon ./server/index.js --exec \"node --require dotenv/config --require @babel/register\"",
     "test-server": "jest",
     "db:seed": "nodemon ./server/scripts/seed.js --exec \"node --require dotenv/config --require @babel/register\"",
-    "db:db": "nodemon ./server/scripts/seed.js --exec \"node --require dotenv/config --require @babel/register\""
+    "db:db": "nodemon ./scripts/seed.js --exec \"node --require dotenv/config --require @babel/register\""
   },
   "eslintConfig": {
     "extends": "react-app"
