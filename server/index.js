@@ -29,7 +29,7 @@ getAuthRoutes(app);
 getOrderRoutes(app);
 
 app.get('/time', (req, res) =>
-    res.send({ datetime: new Date().toJSON()
-    }));
+    res.send({ datetime: new Date().toJSON() })
+);
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
