@@ -1,9 +1,0 @@
-.PokemonList {
-    display: flex;
-    flex-direction: column;
-}
-
-.PokemonList a {
-    text-decoration: none;
-    color: black;
-}
