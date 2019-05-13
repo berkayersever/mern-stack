@@ -9,6 +9,7 @@ export default class NavigationBar extends Component {
         return (
             <div className="NavigationBar">
                 <Link to="/">home</Link>
+                <Link to="/category/fire">#Fire</Link>
                 <Link to="/category/sporty">#sporty</Link>
                 <Link to="/category/tshirts">#tshirts</Link>
                 <Link to="/category/jackets">#jackets</Link>

@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import FormDemo from './pages/FormDemo';
 import NotFound from './pages/NotFound';
 import Category from './pages/Category';
+import Pokemon from './pages/Pokemon';
 import Product from './pages/Product';
 import Orders from './pages/Orders';
 import Cart from './pages/Cart';
@@ -104,6 +105,8 @@ class App extends Component {
                         <Route path="/admin/users" exact component={UserManagement} />}
                         {isLoggedIn && this.state.user.role === 'admin' &&
                         <Route path="/admin/products" exact component={ProductManagement} />}
+                        {isLoggedIn && this.state.user.role === 'admin' &&
+                        <Route path="/admin/pokemons" exact component={Pokemon} />}
 
                         <Route component={NotFound} />
                     </Switch>

@@ -8,6 +8,7 @@ import withAdminPermission from './middleware/withAdminPermission';
 import withAuthentication from './middleware/withAuthentication';
 import getUserRoutes from './routes/users';
 import getProductRoutes from './routes/products';
+import getPokemonRoutes from './routes/pokemons';
 import getAuthRoutes from './routes/auth';
 import getOrderRoutes from './routes/orders';
 import db from './db';
@@ -25,6 +26,7 @@ app.use(withAdminPermission);
 app.use(logger);
 getUserRoutes(app);
 getProductRoutes(app);
+getPokemonRoutes(app);
 getAuthRoutes(app);
 getOrderRoutes(app);
 
