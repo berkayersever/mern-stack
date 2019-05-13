@@ -7,8 +7,8 @@ export default class Product {
      * @param {boolean} featured
      * @param {boolean} legendary
      */
-    constructor({ id, name, price, images, featured, legendary }) {
-        this._id = id;
+    constructor({ _id, name, price, images, featured, legendary }) {
+        this._id = _id;
         this._name = name;
         this._price = price;
         this._images = images;
