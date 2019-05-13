@@ -104,8 +104,6 @@ class App extends Component {
                         <Route path="/admin/users" exact component={UserManagement} />}
                         {isLoggedIn && this.state.user.role === 'admin' &&
                         <Route path="/admin/products" exact component={ProductManagement} />}
-                        {isLoggedIn && this.state.user.role === 'admin' &&
-                        <Route path="/admin/pokemons" exact component={Pokemon} />}
 
                         <Route component={NotFound} />
                     </Switch>
