@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { users, products, pokemons } from './data';
+import { users, products } from './data';
 import { UserModel} from '../models/User';
 import { ProductModel } from '../models/Product';
 
