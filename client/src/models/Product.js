@@ -1,4 +1,4 @@
-export default class Pokemon {
+export default class Product {
     /**
      * @param {string} id
      * @param {string} name
