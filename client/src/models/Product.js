@@ -1,17 +1,19 @@
-export default class Product {
+export default class Pokemon {
     /**
      * @param {string} id
      * @param {string} name
      * @param {number} price
-     * @param {boolean} featured
      * @param {Array<string>} images
+     * @param {boolean} featured
+     * @param {boolean} legendary
      */
-    constructor({ _id, name, price, images, featured }) {
-        this._id = _id;
+    constructor({ id, name, price, images, featured, legendary }) {
+        this._id = id;
         this._name = name;
         this._price = price;
         this._images = images;
         this._featured = featured;
+        this._legendary = legendary;
     }
 
     /**
@@ -46,14 +48,20 @@ export default class Product {
     isFeatured = () => this._featured;
 
     /**
-     * @return {{_id: string, name: string, price: number, formattedPrice: string, images: Array<string>}}
+     * @return {boolean}
+     */
+    isLegendary = () => this._legendary;
+
+    /**
+     * @return {{id: string, name: string, price: number, formattedPrice: string, images: Array<string>, featured: boolean, legendary: boolean}}
      */
     getData = () => ({
-        _id: this._id,
+        id: this._id,
         name: this._name,
         price: this._price,
         formattedPrice: this.getFormattedPrice(),
         images: this._images,
-        featured: this._featured
+        featured: this._featured,
+        legendary: this._legendary
     });
 }
