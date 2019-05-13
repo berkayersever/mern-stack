@@ -1,7 +1,7 @@
 import mongoose, { Schema } from 'mongoose';
 
 export const ProductSchema = new Schema({
-    pokedex: Number,
+    index: Number,
     name: String,
     price: Number,
     images: [String],
