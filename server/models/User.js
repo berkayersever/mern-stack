@@ -4,12 +4,14 @@ export default class User {
     /**
      * @param {string} id
      * @param {string} username
+     * @param {string} password
      * @param {string} email
      * @param {string} role
      */
-    constructor({ id, username, email, role }) {
+    constructor({ id, username, password, email, role }) {
         this._id = id;
         this._username = username;
+        this._password = password;
         this._email = email;
         this._role = role;
     }
@@ -27,6 +29,11 @@ export default class User {
     /**
      * @return {string}
      */
+    getPassword = () => this._password;
+
+    /**
+     * @return {string}
+     */
     getEmail = () => this._email;
 
     /**
@@ -40,6 +47,7 @@ export default class User {
     getData = () => ({
         id: this._id,
         username: this._username,
+        password: this._password,
         email: this._email,
         role: this._role,
     });
@@ -48,6 +56,7 @@ export default class User {
 export const UserSchema = new Schema({
     email: String,
     username: String,
+    password: String,
     role: String
 });
 
