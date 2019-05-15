@@ -54,8 +54,15 @@ export default class User {
 }
 
 export const UserSchema = new Schema({
-    email: String,
-    username: String,
+    email: {
+        type: String,
+        unique: true,
+        required: [true, 'Email is required!'],
+        trim: true
+    },
+    username: {
+        type: String, unique: true
+    },
     password: String,
     role: String
 });
