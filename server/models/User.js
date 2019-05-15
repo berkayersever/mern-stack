@@ -1,4 +1,5 @@
 import mongoose, { Schema } from 'mongoose';
+import validator from 'validator';
 
 export default class User {
     /**
@@ -58,7 +59,7 @@ export const UserSchema = new Schema({
         type: String,
         unique: true,
         required: [true, 'Email is required!'],
-        trim: true
+        trim: true,
     },
     username: {
         type: String, unique: true
