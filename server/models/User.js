@@ -1,5 +1,5 @@
 import mongoose, { Schema } from 'mongoose';
-import validator from 'validator';
+import isEmail from 'validator/lib/isEmail';
 
 export default class User {
     /**
@@ -60,6 +60,12 @@ export const UserSchema = new Schema({
         unique: true,
         required: [true, 'Email is required!'],
         trim: true,
+        validate: {
+            validator(email) {
+                return validator.isEmail(email);
+            },
+            message: '{VALUE} is not a valid email!'
+        }
     },
     username: {
         type: String, unique: true
