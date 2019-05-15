@@ -24,9 +24,9 @@ db.once('open', () => {
             console.log(error);
         }
     });
-    ProductModel.insertMany(products, (error) => {
-        if (error) {
-            console.log(error);
-        }
-    });
+    // ProductModel.insertMany(products, (error) => {
+    //     if (error) {
+    //         console.log(error);
+    //     }
+    // });
 });
