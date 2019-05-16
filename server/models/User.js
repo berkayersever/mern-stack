@@ -1,5 +1,5 @@
 import mongoose, { Schema } from 'mongoose';
-import isEmail from 'validator/lib/isEmail';
+import validator from 'validator';
 
 export default class User {
     /**
@@ -62,7 +62,7 @@ export const UserSchema = new Schema({
         trim: true,
         validate: {
             validator(email) {
-                return validator.isEmail(email);
+                return validator.isEmail(email)
             },
             message: '{VALUE} is not a valid email!'
         }

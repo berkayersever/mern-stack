@@ -17,7 +17,7 @@ export const users = [
     { username: 'hjeffese', email: 'smixworthye@canalblog.com', role: 'customer', password: '' },
     { username: 'yblasikf', email: 'dpiertonf@army.mil', role: 'customer', password: '' },
     { username: 'berkay', email: 'berkay@live.se', role: 'admin', password: '' },
-    { username: 'berkayersever', email: 'berkayersever', role: 'customer', password: '' },
+    { username: 'berkayersever', email: 'berkayersever@sabanciuniv.edu', role: 'customer', password: '' },
 ];
 
 // export const products = [
