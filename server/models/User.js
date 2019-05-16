@@ -81,7 +81,7 @@ export const UserSchema = new Schema({
         minlength: [6, 'Password need to be longer!'],
         validate: {
             validator(password) {
-                return password;
+                return passwordReg.test(password);
             },
             message: '{VALUE} is not a valid password!'
         }
