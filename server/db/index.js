@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-mongoose.connect(process.env.CONNECTION_STRING, {useNewUrlParser: true},
+mongoose.connect(process.env.CONNECTION_STRING, {useNewUrlParser: true, useCreateIndex: true},
     (err) => {
         if (err) {
             console.log('Database Error----------------', err);

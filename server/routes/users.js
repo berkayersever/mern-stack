@@ -1,4 +1,8 @@
+import express from 'express';
+import { signup } from '../validations/user';
 import { UserModel } from '../models/User';
+
+const Joi = require(`@hapi/joi`);
 
 export default (app) => {
     app.get('/v1/users', async (req, res) => {
@@ -34,6 +38,20 @@ export default (app) => {
         // const role = req.body.role;
         // console.log('post: data =>', username, email, role);
         res.status(200).end();
+    });
+
+    app.post('/v1/users/signup', async (req, res) => {
+        try {
+            const { email, username, password, role } = req.body;
+            await Joi.validate({ email, username, password, role }, signup);
+
+            const newUser = new UserModel({ email, username, password, role });
+            await newUser.save();
+
+            res.send({ userId: newUser.id, username });
+        } catch (err) {
+            res.status(400).end;
+        }
     });
 
     app.post('/v1/users/register', (req, res) => {

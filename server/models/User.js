@@ -1,6 +1,6 @@
 import mongoose, { Schema } from 'mongoose';
 import validator from 'validator';
-import { passwordReg } from '../validations/userValidation';
+import { passwordReg } from '../validations/user';
 
 export default class User {
     /**
