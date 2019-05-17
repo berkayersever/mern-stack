@@ -1,6 +1,8 @@
 import express from 'express';
 import { signup } from '../validations/user';
 import { UserModel } from '../models/User';
+import AuthenticationService from "../service/AuthenticationService";
+import EmailService from "../service/EmailService";
 
 const Joi = require(`@hapi/joi`);
 
@@ -43,15 +45,50 @@ export default (app) => {
     app.post('/v1/users/signup', async (req, res) => {
         try {
             const { email, username, password, role } = req.body;
-            await Joi.validate({ email, username, password, role }, signup);
+            console.log('ASD-0');
+            // await Joi.validate({ email, username, password, role }, signup);
 
             const newUser = new UserModel({ email, username, password, role });
+            console.log(newUser);
             await newUser.save();
 
             res.send({ userId: newUser.id, username });
+
+            // const newUser = new UserModel({ email, username, password, role });
+            // await newUser.save();
+            console.log('ASD1');
+            // const newUser = await UserModel.create({ email, username, password, role });
+            console.log('ASD2');
+
+
         } catch (err) {
             res.status(400).end;
         }
+
+        // const { email } = req.body;
+        // if (email === undefined || email.split('@').length !== 2) {
+        //     return res.status(400).end();
+        // }
+        //
+        // const user = await UserModel.findOne({ email });
+        // if (user) {
+        //     const token = await AuthenticationService.generate(user);
+        //     console.log('User exists. Generating a new token.');
+        //     EmailService.sendEmail(user, token);
+        //     res.status(200).end();
+        // } else {
+        //     const newUser = await UserModel.create({
+        //         username: email.split('@')[0],
+        //         email,
+        //         role: 'customer',
+        //     });
+        //
+        //     const token = await AuthenticationService.generate(newUser);
+        //     console.log('Created a new user: ', newUser);
+        //     EmailService.sendEmail(newUser, token);
+        //     res.status(200).end();
+        // }
+
     });
 
     app.post('/v1/users/register', (req, res) => {

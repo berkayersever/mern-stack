@@ -1,6 +1,7 @@
 import mongoose, { Schema } from 'mongoose';
+import { compareSync, hashSync } from 'bcryptjs';
 import validator from 'validator';
-import { passwordReg } from '../validations/user';
+// import { passwordReg } from '../validations/user';
 
 export default class User {
     /**
@@ -55,7 +56,7 @@ export default class User {
     });
 }
 
-export const UserSchema = new Schema({
+const UserSchema = new Schema({
     email: {
         type: String,
         unique: true,
@@ -79,12 +80,12 @@ export const UserSchema = new Schema({
         required: [true, 'Password is required!'],
         trim: true,
         minlength: [6, 'Password need to be longer!'],
-        validate: {
-            validator(password) {
-                return passwordReg.test(password);
-            },
-            message: '{VALUE} is not a valid password!'
-        }
+        // validate: {
+        //     validator(password) {
+        //         return passwordReg.test(password);
+        //     },
+        //     message: '{VALUE} is not a valid password!'
+        // }
     },
     role: {
         type: String,
@@ -92,5 +93,19 @@ export const UserSchema = new Schema({
         trim: true
     }
 });
+
+UserSchema.pre('save', function () {
+    if (this.isModified('password')) {
+        this.password = hashSync(this.password, 10);
+    }
+});
+
+UserSchema.statics.doesNotExist = async function (field) {
+    return await this.where(field).countDocuments() === 0;
+};
+
+UserSchema.methods.comparePasswords = function (password) {
+    return compareSync(password, this.password);
+};
 
 export const UserModel = mongoose.model('User', UserSchema);
