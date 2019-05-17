@@ -72,6 +72,9 @@ typings/
 # production
 /build
 
+# IDE
+**/.idea
+
 # misc
 .DS_Store
 .env
