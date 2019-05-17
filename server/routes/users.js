@@ -46,7 +46,7 @@ export default (app) => {
         try {
             const { email, username, password, role } = req.body;
             console.log('ASD-0');
-            // await Joi.validate({ email, username, password, role }, signup);
+            await Joi.validate({ email, username, password, role }, signup);
 
             const newUser = new UserModel({ email, username, password, role });
             console.log(newUser);
