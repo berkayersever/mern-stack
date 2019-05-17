@@ -1,6 +1,7 @@
 import express from 'express';
 import { signup } from '../validations/user';
 import { UserModel } from '../models/User';
+import { parseError, sessionizeUser } from '../scripts/helpers';
 // import AuthenticationService from "../service/AuthenticationService";
 // import EmailService from "../service/EmailService";
 
@@ -48,8 +49,10 @@ export default (app) => {
             // TODO: Fix Validation
             // await Joi.validate({ email, username, password, role }, signup);
             const newUser = new UserModel({ email, username, password, role });
+            const sessionUser = sessionizeUser(newUser);
             await newUser.save();
-            res.send({ userId: newUser.id, username });
+            req.session.user = sessionUser;
+            res.send(sessionUser);
         }
         catch (err) {
             res.status(400).end;
