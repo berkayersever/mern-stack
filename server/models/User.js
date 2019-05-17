@@ -1,6 +1,6 @@
 import mongoose, { Schema } from 'mongoose';
 import { compareSync, hashSync } from 'bcryptjs';
-import validator from 'validator';
+// import validator from 'validator';
 
 export default class User {
     /**
@@ -62,36 +62,32 @@ const UserSchema = new Schema({
         required: [true, 'Email is required!'],
         trim: true,
         validate: {
-            validator(email) {
-                return validator.isEmail(email);
-            },
-            message: '{VALUE} is not a valid email!'
+            validator: email => User.doesNotExist({ email }),
+            message: 'Email already exists!'
         }
     },
     username: {
         type: String,
         required: [true, 'Username is required!'],
         trim: true,
-        unique: true
+        unique: true,
+        validate: {
+            validator: username => User.doesNotExist({ username }),
+            message: 'Username already exists!'
+        }
     },
     password: {
         type: String,
         required: [true, 'Password is required!'],
         trim: true,
         minlength: [6, 'Password need to be longer!'],
-        // validate: {
-        //     validator(password) {
-        //         return passwordReg.test(password);
-        //     },
-        //     message: '{VALUE} is not a valid password!'
-        // }
     },
     role: {
         type: String,
         required: [true, 'Role is required!'],
         trim: true
     }
-});
+}, { timestamps: true });
 
 UserSchema.pre('save', function () {
     if (this.isModified('password')) {
