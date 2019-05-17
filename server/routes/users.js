@@ -1,4 +1,4 @@
-// import express from 'express';
+import express from 'express';
 import { signup } from '../validations/user';
 import { UserModel } from '../models/User';
 // import AuthenticationService from "../service/AuthenticationService";
@@ -25,7 +25,7 @@ export default (app) => {
                 res.status(404).end;
             }
         }
-        catch (e) {
+        catch (err) {
             res.status(404).end;
         }
     });
@@ -45,23 +45,13 @@ export default (app) => {
     app.post('/v1/users/signup', async (req, res) => {
         try {
             const { email, username, password, role } = req.body;
-            console.log('ASD-0');
-            await Joi.validate({ email, username, password, role }, signup);
-
+            // TODO: Fix Validation
+            // await Joi.validate({ email, username, password, role }, signup);
             const newUser = new UserModel({ email, username, password, role });
-            console.log(newUser);
             await newUser.save();
-
             res.send({ userId: newUser.id, username });
-
-            // const newUser = new UserModel({ email, username, password, role });
-            // await newUser.save();
-            console.log('ASD1');
-            // const newUser = await UserModel.create({ email, username, password, role });
-            console.log('ASD2');
-
-
-        } catch (err) {
+        }
+        catch (err) {
             res.status(400).end;
         }
 
