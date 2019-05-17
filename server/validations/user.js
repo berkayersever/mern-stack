@@ -14,6 +14,7 @@ const Joi = require(`@hapi/joi`);
 // import Joi from '@hapi/joi';
 const email = Joi.string().email().required();
 const username = Joi.string().alphanum().min(3).max(30).required();
+const role = Joi.string().alphanum().min(3).max(30).required();
 const message = 'must be between 6-16 characters, ' +
     'have at least one capital letter, ' +
     'one lowercase letter, one digit, ' +
@@ -32,7 +33,8 @@ const password = Joi.string()
 export const signup = Joi.object().keys({
     email,
     username,
-    password
+    password,
+    role
 });
 export const signin = Joi.object().keys({
     email,
