@@ -5,7 +5,8 @@ import { parseError, sessionizeUser } from '../scripts/helpers';
 // import AuthenticationService from "../service/AuthenticationService";
 // import EmailService from "../service/EmailService";
 
-const Joi = require(`@hapi/joi`);
+// const Joi = require(`@hapi/joi`);
+const Joi = require('joi');
 
 export default (app) => {
     app.get('/v1/users', async (req, res) => {
