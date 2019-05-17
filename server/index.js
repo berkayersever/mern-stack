@@ -1,4 +1,5 @@
 import express from 'express';
+import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import session from 'express-session';
 import connectStore from "connect-mongo";
@@ -15,8 +16,26 @@ import getOrderRoutes from './routes/orders';
 import db from './db';
 
 const app = express();
+const MongoStore = connectStore(session);
 const port = process.env.PORT;
 // const secret = process.env.JWT_SECRET;
+app.use(session({
+    name: process.env.SESSION_NAME,
+    secret: process.env.SESSION_SECRET,
+    store: new MongoStore({
+        mongooseConnection: mongoose.connection,
+        collection: 'session',
+        ttl: parseInt(process.env.SESSION_LIFETIME) / 1000
+    }),
+    saveUninitialized: false,
+    resave: false,
+    cookie: {
+        sameSite: true,
+        // TODO: Replace 'false' with " process.env.NODE_ENV === 'production' "
+        secure: false,
+        maxAge: parseInt(process.env.SESSION_LIFETIME)
+    }
+}));
 app.use(helmet());
 app.use(compression());
 app.use(cors());
