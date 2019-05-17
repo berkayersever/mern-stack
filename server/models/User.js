@@ -1,7 +1,6 @@
 import mongoose, { Schema } from 'mongoose';
 import { compareSync, hashSync } from 'bcryptjs';
 import validator from 'validator';
-// import { passwordReg } from '../validations/user';
 
 export default class User {
     /**
