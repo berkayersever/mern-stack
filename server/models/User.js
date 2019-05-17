@@ -62,7 +62,7 @@ const UserSchema = new Schema({
         required: [true, 'Email is required!'],
         trim: true,
         validate: {
-            validator: email => User.doesNotExist({ email }),
+            validator: email => UserModel.doesNotExist({ email }),
             message: 'Email already exists!'
         }
     },
@@ -72,7 +72,7 @@ const UserSchema = new Schema({
         trim: true,
         unique: true,
         validate: {
-            validator: username => User.doesNotExist({ username }),
+            validator: username => UserModel.doesNotExist({ username }),
             message: 'Username already exists!'
         }
     },
@@ -86,7 +86,7 @@ const UserSchema = new Schema({
         type: String,
         required: [true, 'Role is required!'],
         trim: true
-    }
+    },
 }, { timestamps: true });
 
 UserSchema.pre('save', function () {
