@@ -1,6 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import session from 'express-session';
+import connectStore from "connect-mongo";
 import cors from 'cors';
 import helmet from 'helmet';
 import compression from 'compression';
