@@ -1,8 +1,8 @@
-import express from 'express';
+// import express from 'express';
 import { signup } from '../validations/user';
 import { UserModel } from '../models/User';
-import AuthenticationService from "../service/AuthenticationService";
-import EmailService from "../service/EmailService";
+// import AuthenticationService from "../service/AuthenticationService";
+// import EmailService from "../service/EmailService";
 
 const Joi = require(`@hapi/joi`);
 
