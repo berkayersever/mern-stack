@@ -52,6 +52,7 @@ export default (app) => {
             const sessionUser = sessionizeUser(newUser);
             await newUser.save();
             req.session.user = sessionUser;
+            console.log(req.session);
             res.send(sessionUser);
         }
         catch (err) {
