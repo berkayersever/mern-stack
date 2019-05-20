@@ -9,7 +9,7 @@ export const login = user => (
 );
 
 export const signup = user => (
-    fetch('api/users', {
+    fetch('http://localhost:8055/v1/users/signup', {
         method: 'POST',
         body: JSON.stringify(user),
         headers: {

@@ -14,6 +14,8 @@ import getProductRoutes from './routes/products';
 import getSessionRoutes from './routes/session';
 import getAuthRoutes from './routes/auth';
 import getOrderRoutes from './routes/orders';
+// import userRoutes from './routes/users';
+// import sessionRoutes from './routes/session';
 import db from './db';
 
 const app = express();
@@ -50,6 +52,11 @@ getProductRoutes(app);
 getSessionRoutes(app);
 getAuthRoutes(app);
 getOrderRoutes(app);
+
+// const apiRouter = express.Router();
+// app.use('/api', apiRouter);
+// apiRouter.use('/users', userRoutes);
+// apiRouter.use('/session', sessionRoutes);
 
 app.get('/time', (req, res) =>
     res.send({ datetime: new Date().toJSON() })

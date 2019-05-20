@@ -24,7 +24,9 @@ export const login = user => async dispatch => {
 };
 
 export const signup = user => async dispatch => {
+    console.log(user);
     const response = await apiUtil.signup(user);
+    console.log(user);
     const data = await response.json();
 
     if (response.ok) {
