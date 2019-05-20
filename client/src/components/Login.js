@@ -11,15 +11,13 @@ const mapDispatchToProps = dispatch => ({
     login: user => dispatch(login(user))
 });
 
-const Login = ({errors, login}) => {
-
+const Login = ({ errors, login }) => {
     const handleSubmit = e => {
         e.preventDefault();
         const user = {
             email: e.target[0].value,
             password: e.target[1].value,
         };
-
         login(user);
     };
 
