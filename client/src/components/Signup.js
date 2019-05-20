@@ -24,7 +24,7 @@ const Signup = ({errors, signup}) => {
     };
 
     return (
-        <Fragment>
+        <>
             <h1>Signup</h1>
             <p>{errors}</p>
             <form onSubmit={handleSubmit}>
@@ -43,7 +43,7 @@ const Signup = ({errors, signup}) => {
                 <input type="submit" value="Submit"/>
             </form>
             <Link to="/login">Login</Link>
-        </Fragment>
+        </>
     );
 };
 
