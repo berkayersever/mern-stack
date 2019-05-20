@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { login } from '../actions/session';
 
-const mapStateToProps = ({errors}) => ({
+const mapStateToProps = ({ errors }) => ({
     errors
 });
 
