@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { signup } from '../actions/session';
 
-const mapStateToProps = ({errors}) => ({
+const mapStateToProps = ({ errors }) => ({
     errors
 });
 
@@ -11,7 +11,7 @@ const mapDispatchToProps = dispatch => ({
     signup: user => dispatch(signup(user))
 });
 
-const Signup = ({errors, signup}) => {
+const Signup = ({ errors, signup }) => {
     const handleSubmit = e => {
         e.preventDefault();
         const user = {
@@ -19,7 +19,6 @@ const Signup = ({errors, signup}) => {
             email: e.target[1].value,
             password: e.target[2].value
         };
-
         signup(user);
     };
 
