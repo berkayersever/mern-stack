@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import store from 'store2';
 import NavigationBar from './components/NavigationBar';
+import Login from './components/Login';
+import Signup from './components/Signup';
+import Dashboard from './components/Dashboard';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import FormDemo from './pages/FormDemo';
@@ -80,7 +83,10 @@ class App extends Component {
                         itemsInCart={this.state.itemsInCart.length}
                     />
                     <Switch>
-                        <Route path="/" exact component={Home} />
+                        <Route exact path="/" exact component={Home} />
+                        <Route path="/login" component={Login} />
+                        <Route path="/signup" component={Signup} />
+                        <Route path="/dashboard" component={Dashboard} />
                         <Route path="/auth/:token" exact component={Auth(this.authUser)} />
                         <Route path="/forms" exact component={FormDemo} />
                         <Route
