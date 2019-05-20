@@ -11,7 +11,7 @@ const mapDispatchToProps = dispatch => ({
     signup: user => dispatch(signup(user))
 });
 
-const Signup = ({errors, signup}) => {
+const Signup = ({ errors, signup }) => {
     const handleSubmit = e => {
         e.preventDefault();
         const user = {
@@ -26,8 +26,8 @@ const Signup = ({errors, signup}) => {
     return (
         <Fragment>
             <h1>Signup</h1>
-            <p>{errors}</p>
-            <form onSubmit={handleSubmit}>
+            <p>{ errors }</p>
+            <form onSubmit={ handleSubmit }>
                 <label>
                     Username:
                     <input type="text" name="username"/>
