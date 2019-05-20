@@ -22,12 +22,7 @@ export default class NavigationBar extends Component {
                         <Link to="/cart">my cart ({itemsInCart})</Link>
                         <Link to="/orders">orders</Link>
                     </Fragment> :
-                    <Fragment>
-                        <Link to="/account">account</Link>
-                        <Link to='/login'>Login</Link>
-                        <Link to='/signup'>Signup</Link>
-                        <Link to='/dashboard'>Dashboard</Link>
-                    </Fragment>
+                    <Link to="/account">account</Link>
                 }
             </div>
         );
